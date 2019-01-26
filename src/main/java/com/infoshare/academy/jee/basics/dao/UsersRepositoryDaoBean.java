@@ -1,6 +1,6 @@
-package com.infoshare.academy.jee.basics;
+package com.infoshare.academy.jee.basics.dao;
 
-import com.infoshare.academy.jee.basics.dao.UsersRepositoryDao;
+import com.infoshare.academy.jee.basics.repository.UsersRepository;
 import com.infoshare.academy.jee.basics.domain.User;
 
 import java.util.List;

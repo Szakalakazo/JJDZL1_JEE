@@ -1,4 +1,4 @@
-package com.infoshare.academy.jee.basics;
+package com.infoshare.academy.jee.basics.repository;
 
 
 import com.infoshare.academy.jee.basics.domain.User;
