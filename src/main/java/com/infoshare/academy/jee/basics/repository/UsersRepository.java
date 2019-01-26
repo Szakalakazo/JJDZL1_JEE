@@ -20,7 +20,7 @@ public class UsersRepository {
         User user1 = new User(1, "Jan", "Muzykant", "secret", 21);
         usersRepository.add(user1);
 
-        User user2 = new User(2, "Adam", "Ad", "admin",35);
+        User user2 = new User(2, "Adam", "Ad", "admin", 35);
         usersRepository.add(user2);
 
         User user3 = new User(3, "Zuzanna", "Zuz", "1234", 32);

@@ -12,7 +12,7 @@ public class User {
     private String password;
 
 
-    public User(int id, String name, String login, String password,int age) {
+    public User(int id, String name, String login, String password, int age) {
         this.id = id;
         this.age = age;
         this.name = name;
@@ -39,4 +39,5 @@ public class User {
     public String getPassword() {
         return password;
     }
+
 }
