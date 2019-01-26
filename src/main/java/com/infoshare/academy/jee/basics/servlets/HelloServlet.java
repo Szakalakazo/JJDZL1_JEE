@@ -13,11 +13,12 @@ import java.io.PrintWriter;
 public class HelloServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         PrintWriter printWriter = response.getWriter();
-        printWriter.write("Hello from my first Servlet!");
+
+
+        printWriter.write("Hello from my first Servlet1!");
         response.setContentType("text/html;charset=UTF-8");
 
     }
