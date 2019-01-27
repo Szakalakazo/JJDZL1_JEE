@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
+
 
 @WebServlet("/find-user-by-id")
 public class FindUSerByIdServlet extends HttpServlet {
@@ -34,17 +34,14 @@ public class FindUSerByIdServlet extends HttpServlet {
             try {
                 User userById = dao.getUserById(Integer.parseInt(id));
                 printWriter.write("User ID: " + userById.getId());
-                printWriter.write("User name: " + userById.getName());
-                printWriter.write("User login: " + userById.getLogin());
-                printWriter.write("User age: " + userById.getAge());
+                printWriter.write("\nUser name: " + userById.getName());
+                printWriter.write("\nUser login: " + userById.getLogin());
+                printWriter.write("\nUser age: " + userById.getAge());
 
 
             } catch (IllegalArgumentException exc) {
                 printWriter.write("User with this Id does not exist!");
             }
-
-
         }
-
     }
 }
