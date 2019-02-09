@@ -3,10 +3,11 @@ package com.infoshare.academy.jee.basics.dao;
 import com.infoshare.academy.jee.basics.repository.UsersRepository;
 import com.infoshare.academy.jee.basics.domain.User;
 
+import javax.ejb.Stateless;
 import java.util.List;
 
+@Stateless
 public class UsersRepositoryDaoBean implements UsersRepositoryDao {
-
 
     @Override
     public void addUser(User user) {

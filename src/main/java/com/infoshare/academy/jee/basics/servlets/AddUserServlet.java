@@ -4,6 +4,7 @@ import com.infoshare.academy.jee.basics.dao.UsersRepositoryDao;
 import com.infoshare.academy.jee.basics.dao.UsersRepositoryDaoBean;
 import com.infoshare.academy.jee.basics.domain.User;
 
+import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,6 +18,8 @@ import java.io.PrintWriter;
 @WebServlet("/add-user-no-id")
 public class AddUserServlet extends HttpServlet {
 
+    @EJB
+    private UsersRepositoryDao dao;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -29,7 +32,7 @@ public class AddUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        UsersRepositoryDao dao = new UsersRepositoryDaoBean();
+        //UsersRepositoryDao dao = new UsersRepositoryDaoBean();
         int id = dao.getUsersList().size();
         PrintWriter pw = response.getWriter();
 

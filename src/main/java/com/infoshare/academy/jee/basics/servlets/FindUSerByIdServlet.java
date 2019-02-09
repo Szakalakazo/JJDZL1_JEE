@@ -3,7 +3,9 @@ package com.infoshare.academy.jee.basics.servlets;
 import com.infoshare.academy.jee.basics.dao.UsersRepositoryDao;
 import com.infoshare.academy.jee.basics.dao.UsersRepositoryDaoBean;
 import com.infoshare.academy.jee.basics.domain.User;
+import com.infoshare.academy.jee.basics.repository.UsersRepository;
 
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,13 +18,16 @@ import java.io.PrintWriter;
 @WebServlet("/find-user-by-id")
 public class FindUSerByIdServlet extends HttpServlet {
 
+    @EJB
+    private UsersRepositoryDao dao;
+
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String id = request.getParameter("id");
 
-        UsersRepositoryDao dao = new UsersRepositoryDaoBean();
+        //UsersRepositoryDao dao = new UsersRepositoryDaoBean();
 
         PrintWriter printWriter = response.getWriter();
 
