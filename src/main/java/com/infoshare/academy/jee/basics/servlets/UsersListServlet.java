@@ -21,7 +21,6 @@ public class UsersListServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
         PrintWriter pw = response.getWriter();
         UsersRepositoryDao usersRepositoryDao = new UsersRepositoryDaoBean();
 
@@ -32,10 +31,9 @@ public class UsersListServlet extends HttpServlet {
                 pw.write(user.toString());
                 pw.write("\n");
             }
-            //pw.println("<br><a href=index.html>Back</a>");
         } else {
             pw.write("List is empty!");
-        }
 
+        }
     }
 }
