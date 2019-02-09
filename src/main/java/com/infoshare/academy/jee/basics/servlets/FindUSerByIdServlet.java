@@ -29,10 +29,11 @@ public class FindUSerByIdServlet extends HttpServlet {
 
         if (request.getParameter("id") == null || request.getParameter("id").isEmpty()) {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            return;
         } else {
 
             try {
-                User userById = dao.getUserById(Integer.parseInt(id));
+                User userById = dao.getUserById(Integer.valueOf(id));
                 printWriter.write("User ID: " + userById.getId());
                 printWriter.write("\nUser name: " + userById.getName());
                 printWriter.write("\nUser login: " + userById.getLogin());

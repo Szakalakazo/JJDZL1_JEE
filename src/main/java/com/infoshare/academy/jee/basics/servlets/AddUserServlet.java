@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 
-@WebServlet("/add-user")
+@WebServlet("/add-user-no-id")
 public class AddUserServlet extends HttpServlet {
 
 
@@ -46,6 +46,7 @@ public class AddUserServlet extends HttpServlet {
             id++;
             User newUser = new User(id, name, login, password, Integer.parseInt(age));
             dao.addUser(newUser);
+
             pw.write("Siała baba mak");
         }
     }

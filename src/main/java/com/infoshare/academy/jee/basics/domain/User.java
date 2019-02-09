@@ -40,4 +40,12 @@ public class User {
         return password;
     }
 
+    @Override
+    public String toString() {
+        return "User: " +
+                "id: " + id +
+                ", age: " + age +
+                ", name: '" + name + '\'' +
+                ", login: '" + login + '\'';
+    }
 }
